@@ -270,6 +270,7 @@ MonoBehaviour:
   vertical: 0
   changeTime: 3
   smokeEffect: {fileID: 4034756677934243422, guid: 3a7cb73864b8f22469bca5fb9f17940d, type: 3}
+  fixedSound: {fileID: 8300000, guid: 88018fae67a1fe84297c996844bbc326, type: 3}
 --- !u!1001 &6592871063870251556
 PrefabInstance:
   m_ObjectHideFlags: 0

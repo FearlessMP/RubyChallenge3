@@ -12,6 +12,7 @@ public class RubyController : MonoBehaviour
 
     public AudioClip throwSound;
     public AudioClip hitSound;
+    public AudioClip dialougeSound;
     
     public int health { get { return currentHealth; }}
     int currentHealth;
@@ -80,6 +81,7 @@ public class RubyController : MonoBehaviour
                 if (character != null)
                 {
                     character.DisplayDialog();
+                    PlaySound(dialougeSound);
                 }
             }
         }
@@ -93,6 +95,8 @@ public class RubyController : MonoBehaviour
         position.y = position.y + speed * vertical * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
+
+        
     }
 
     public void ChangeHealth(int amount)

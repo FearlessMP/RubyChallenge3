@@ -16,6 +16,10 @@ public class HardEnemyController : MonoBehaviour
     bool broken = true;
     
     Animator animator;
+
+    public AudioClip fixedSound;
+
+    AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +27,7 @@ public class HardEnemyController : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         timer = changeTime;
         animator = GetComponent<Animator>();
+        audioSource= GetComponent<AudioSource>();
     }
 
     void Update()
@@ -81,12 +86,18 @@ public class HardEnemyController : MonoBehaviour
     //Public because we want to call it from elsewhere like the projectile script
     public void Fix()
     {
+        PlaySound(fixedSound);
         broken = false;
         rigidbody2D.simulated = false;
         //optional if you added the fixed animation
         animator.SetTrigger("Fixed");
-
         smokeEffect.Stop();
+        
     }
+
+    public void PlaySound(AudioClip clip)
+    {
+    audioSource.PlayOneShot(clip);
+    } 
 }
 

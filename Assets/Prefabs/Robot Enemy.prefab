@@ -153,6 +153,7 @@ MonoBehaviour:
   vertical: 1
   changeTime: 1.5
   smokeEffect: {fileID: 5078485875355912820}
+  fixedSound: {fileID: 8300000, guid: 88018fae67a1fe84297c996844bbc326, type: 3}
 --- !u!95 &4544920989217414104
 Animator:
   serializedVersion: 5
